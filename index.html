@@ -16,9 +16,9 @@
       </div>
 
       <ul
-        class="list-none flex items-center font-600 text-white gap-6 font-500 text-[17px]">
-        <li class="capitalize">text edit</li>
-        <li class="capitalize">image edit</li>
+        class="list-none flex items-center font-600 cursor-pointer text-white gap-6 font-500 text-[17px]">
+        <li class="capitalize" id="textEditButton">text edit</li>
+        <li class="capitalize" id="imageEditButton">image edit</li>
       </ul>
     </nav>
 
@@ -26,7 +26,7 @@
 
     <!-- text edit section start -->
 
-    <section class="w-full my-10">
+    <section class="w-full my-10" id="textEdit">
       <!-- textarea for writing text -->
       <div class="w-[93%] 668px:w-[60%] mx-auto h-[300px]">
         <textarea
@@ -120,10 +120,10 @@
 
     <!-- image edit section start -->
 
-    <section class="w-full">
+    <section class="w-full" id="imageEdit">
       <!-- image -->
       <div
-        class="w-[94%] 668px:w-[40%] border h-[300px] mx-auto my-10"
+        class="w-[94%] 668px:w-[60%] border h-[400px] mx-auto my-10"
         id="imageContainer">
         <input type="file" name="" id="imageInput" />
         <label

@@ -79,3 +79,25 @@ imagePosition.addEventListener("change", (e) => {
   const value = e.target.value;
   imageContainer.style.backgroundPosition = value;
 });
+
+// navbar setting
+const imageEdit = document.getElementById("imageEdit");
+const textEdit = document.getElementById("textEdit");
+const textEditButton = document.getElementById("textEditButton");
+const imageEditButton = document.getElementById("imageEditButton");
+
+imageEdit.style.display = "none";
+
+imageEditButton.addEventListener("click", () => {
+  imageEditButton.style.color = "lightGreen";
+  textEditButton.style.color = "white";
+  imageEdit.style.display = "block";
+  textEdit.style.display = "none";
+});
+
+textEditButton.addEventListener("click", () => {
+  imageEditButton.style.color = "white";
+  textEditButton.style.color = "lightGreen";
+  imageEdit.style.display = "none";
+  textEdit.style.display = "block";
+});
