@@ -28,7 +28,7 @@
 
     <section class="w-full my-10">
       <!-- textarea for writing text -->
-      <div class="w-[60%] mx-auto h-[300px]">
+      <div class="w-[93%] 668px:w-[60%] mx-auto h-[300px]">
         <textarea
           id="textArea"
           class="w-full h-full border px-3 py-2 outline-none"
@@ -36,7 +36,8 @@
       </div>
 
       <!-- font size -->
-      <div class="flex items-center justify-between w-[60%] mx-auto my-5">
+      <div
+        class="flex items-center flex-wrap 668px:flex-nowrap gap-6 justify-between w-[94%] 668px:w-[60%] mx-auto my-5">
         <div class="">
           <label for="fontSize" class="font-semibold text-black text-[20px]"
             >Font Size</label
@@ -44,7 +45,7 @@
           <select
             name="fontSize"
             id="fontSize"
-            class="w-[70%] py-1 px-4 border">
+            class="w-[80%] py-1 px-4 border">
             <option value=" Select your font size">
               Select your font size
             </option>
@@ -65,7 +66,7 @@
           <select
             name="FontWeight"
             id="FontWeight"
-            class="w-[70%] py-1 px-4 border">
+            class="w-[80%] py-1 px-4 border">
             <option value=" Select your font size">
               Select your font weight
             </option>
@@ -86,7 +87,7 @@
           <select
             name="FontFamily"
             id="FontFamily"
-            class="w-[70%] py-1 px-4 border">
+            class="w-[80%] py-1 px-4 border">
             <option value=" Select your font size">
               Select your font family
             </option>
@@ -102,7 +103,7 @@
           <label for="Color" class="font-semibold text-black text-[20px]"
             >Color</label
           ><br />
-          <select name="Color" id="Color" class="w-[70%] py-1 px-4 border">
+          <select name="Color" id="Color" class="w-[80%] py-1 px-4 border">
             <option value=" Select your font size">Select your Color</option>
             <option value="red">Red</option>
             <option value="black">black</option>
@@ -116,6 +117,109 @@
     </section>
 
     <!-- text edit section end -->
+
+    <!-- image edit section start -->
+
+    <section class="w-full">
+      <!-- image -->
+      <div
+        class="w-[94%] 668px:w-[40%] border h-[300px] mx-auto my-10"
+        id="imageContainer">
+        <input type="file" name="" id="imageInput" />
+        <label
+          for="imageInput"
+          id="uploadText"
+          class="w-full h-full flex items-center justify-center">
+          Upload Image
+        </label>
+      </div>
+
+      <!-- styling part -->
+      <div
+        class="flex items-center flex-wrap 668px:flex-nowrap gap-6 justify-between w-[94%] 668px:w-[60%] mx-auto my-5">
+        <div class="">
+          <label for="imageRepeat" class="font-semibold text-black text-[20px]"
+            >Image Repeat</label
+          ><br />
+          <select
+            name="imageRepeat"
+            id="imageRepeat"
+            class="w-[80%] py-1 px-4 border">
+            <option value=" Select your font size">
+              Choose your image style
+            </option>
+            <option value="repeat">Repeat</option>
+            <option value="no-repeat">No-Repeat</option>
+          </select>
+        </div>
+
+        <!-- image position -->
+        <div class="">
+          <label
+            for="imagePosition"
+            class="font-semibold text-black text-[20px]"
+            >Image Position</label
+          ><br />
+          <select
+            name="imagePosition"
+            id="imagePosition"
+            class="w-[80%] py-1 px-4 border">
+            <option value=" Select your font size">
+              Choose your image position
+            </option>
+            <option value="top">Top</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="bottom">Bottom</option>
+            <option value="center">Center</option>
+          </select>
+        </div>
+
+        <!-- image Size -->
+        <div class="">
+          <label for="imageSize" class="font-semibold text-black text-[20px]"
+            >Image Size</label
+          ><br />
+          <select
+            name="imageSize"
+            id="imageSize"
+            class="w-[80%] py-1 px-4 border">
+            <option value=" Select your font size">
+              Choose your image size
+            </option>
+            <option value="cover">Cover</option>
+            <option value="contain">Contain</option>
+            <option value="auto">Auto</option>
+            <option value="unset">Unset</option>
+          </select>
+        </div>
+
+        <!-- image attachment -->
+        <div class="">
+          <label
+            for="imageAttachment"
+            class="font-semibold text-black text-[20px]"
+            >Image Attachment</label
+          ><br />
+          <select
+            name="imageAttachment"
+            id="imageAttachment"
+            class="w-[80%] py-1 px-4 border">
+            <option value=" Select your font size">
+              Choose your image attachment
+            </option>
+            <option value="fixed">Fixed</option>
+            <option value="sticky">Sticky</option>
+            <option value="local">Local</option>
+            <option value="initial">Initial</option>
+            <option value="inherit">Inherit</option>
+            <option value="unset">Unset</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- image edit section end -->
 
     <script src="app.js"></script>
   </body>
