@@ -1,26 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="" id="html">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Property Changer</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
-  <body class="class">
+  <body class="dark:bg-black">
     <!-- navbar start -->
     <nav
-      class="flex items-center justify-between w-full h-[60px] bg-black shadow-sm py-3 px-5">
-      <div class="font-semibold text-4xl text-white">
-        <h1 id="logo">Property Changer</h1>
+      class="flex items-center justify-between dark:shadow-[rgb(255,255,255,0.2)] w-full h-[60px] shadow-md py-3 px-5 dark:bg-black">
+      <div
+        class="font-semibold text-[20px] 668px:text-4xl text-black dark:text-white">
+        <h1 id="logo" class="flex items-center gap-2">
+          <i class="fa-solid fa-gear text-[20px] 668px:text-[30px]"></i>
+          Property Changer
+        </h1>
+        <!-- <i class="fa-solid fa-xmark"></i> -->
       </div>
 
       <ul
         class="list-none flex items-center font-600 cursor-pointer text-white gap-6 font-500 text-[17px]">
-        <li class="capitalize" id="textEditButton">text edit</li>
-        <li class="capitalize" id="imageEditButton">image edit</li>
+        <li
+          class="capitalize text-black dark:text-white hidden 668px:block"
+          id="textEditButton">
+          text edit
+        </li>
+        <li
+          class="capitalize hidden text-black dark:text-white 668px:block"
+          id="imageEditButton">
+          image edit
+        </li>
+        <li class="text-black dark:text-white 668px:hidden" id="menuBar">
+          <i class="fa-solid fa-bars text-[25px]" id="menuIcon"></i>
+        </li>
+        <li
+          title="Light Mode"
+          class="hidden 668px:block text-black dark:text-white">
+          <i class="fa-regular fa-sun" id="mood"></i>
+        </li>
       </ul>
     </nav>
+
+    <!-- mobile navbar -->
+    <div
+      class="hidden w-full h-[150px] bg-white shadow-md dark:bg-black dark:shadow-[rgb(255,255,255,0.2)]"
+      id="mobileNavbar">
+      <ul class="flex items-center justify-center gap-3 flex-col mt-10">
+        <li
+          class="capitalize text-black dark:text-white"
+          id="mobileTextEditButton">
+          text edit
+        </li>
+        <li
+          class="capitalize text-black dark:text-white"
+          id="mobileImageEditButton">
+          image edit
+        </li>
+        <li title="Light Mode" class="text-black dark:text-white">
+          <i class="fa-regular fa-sun" id="lightMood"></i>
+        </li>
+      </ul>
+    </div>
 
     <!-- navbar end -->
 
@@ -31,86 +76,101 @@
       <div class="w-[93%] 668px:w-[60%] mx-auto h-[300px]">
         <textarea
           id="textArea"
-          class="w-full h-full border px-3 py-2 outline-none"
+          class="w-full dark:text-white dark:bg-transparent h-full border px-3 py-2 outline-none"
           placeholder="Type anything......"></textarea>
       </div>
 
       <!-- font size -->
       <div
-        class="flex items-center flex-wrap 668px:flex-nowrap gap-6 justify-between w-[94%] 668px:w-[60%] mx-auto my-5">
+        class="flex items-center flex-wrap 668px:flex-nowrap gap-6 justify-center 668px:justify-between w-[100%] 668px:w-[60%] mx-auto my-5">
         <div class="">
-          <label for="fontSize" class="font-semibold text-black text-[20px]"
+          <label
+            for="fontSize"
+            class="dark:text-white font-semibold text-black text-[20px]"
             >Font Size</label
           ><br />
           <select
             name="fontSize"
             id="fontSize"
-            class="w-[80%] py-1 px-4 border">
-            <option value=" Select your font size">
+            class="w-[80%] mt-2 dark:text-white dark:bg-transparent py-1 px-4 border">
+            <option value=" Select your font size" class="dark:text-black">
               Select your font size
             </option>
-            <option value="10px">10px</option>
-            <option value="15px">15px</option>
-            <option value="20px">20px</option>
-            <option value="25px">25px</option>
-            <option value="30px">30px</option>
-            <option value="35px">35px</option>
+            <option value="10px" class="dark:text-black">20px</option>
+            <option value="15px" class="dark:text-black">30px</option>
+            <option value="20px" class="dark:text-black">40px</option>
+            <option value="25px" class="dark:text-black">50px</option>
+            <option value="30px" class="dark:text-black">60px</option>
+            <option value="35px" class="dark:text-black">70px</option>
           </select>
         </div>
 
         <!-- font weight -->
         <div class="">
-          <label for="FontWeight" class="font-semibold text-black text-[20px]"
+          <label
+            for="FontWeight"
+            class="dark:text-white font-semibold text-black text-[20px]"
             >Font Weight</label
           ><br />
           <select
             name="FontWeight"
             id="FontWeight"
-            class="w-[80%] py-1 px-4 border">
-            <option value=" Select your font size">
+            class="w-[80%] mt-2 dark:text-white dark:bg-transparent py-1 px-4 border">
+            <option value=" Select your font size" class="dark:text-black">
               Select your font weight
             </option>
-            <option value="400">400</option>
-            <option value="500">500</option>
-            <option value="600">600</option>
-            <option value="700">700</option>
-            <option value="800">800</option>
-            <option value="900">900</option>
+            <option value="400" class="dark:text-black">400</option>
+            <option value="500" class="dark:text-black">500</option>
+            <option value="600" class="dark:text-black">600</option>
+            <option value="700" class="dark:text-black">700</option>
+            <option value="800" class="dark:text-black">800</option>
+            <option value="900" class="dark:text-black">900</option>
           </select>
         </div>
 
         <!-- font family -->
         <div class="">
-          <label for="FontFamily" class="font-semibold text-black text-[20px]"
+          <label
+            for="FontFamily"
+            class="dark:text-white font-semibold text-black text-[20px]"
             >Font Family</label
           ><br />
           <select
             name="FontFamily"
             id="FontFamily"
-            class="w-[80%] py-1 px-4 border">
-            <option value=" Select your font size">
+            class="w-[80%] mt-2 dark:text-white dark:bg-transparent py-1 px-4 border">
+            <option value=" Select your font size" class="dark:text-black">
               Select your font family
             </option>
-            <option value="serif">serif</option>
-            <option value="sans-serif">sans-serif</option>
-            <option value="mono">mono</option>
-            <option value="Thin">Thin</option>
+            <option value="serif" class="dark:text-black">serif</option>
+            <option value="sans-serif" class="dark:text-black">
+              sans-serif
+            </option>
+            <option value="mono" class="dark:text-black">mono</option>
+            <option value="Thin" class="dark:text-black">Thin</option>
           </select>
         </div>
 
         <!-- color -->
         <div class="">
-          <label for="Color" class="font-semibold text-black text-[20px]"
+          <label
+            for="Color"
+            class="font-semibold dark:text-white text-black text-[20px]"
             >Color</label
           ><br />
-          <select name="Color" id="Color" class="w-[80%] py-1 px-4 border">
-            <option value=" Select your font size">Select your Color</option>
-            <option value="red">Red</option>
-            <option value="black">black</option>
-            <option value="blue">Blue</option>
-            <option value="yellow">Yellow</option>
-            <option value="pink">Pink</option>
-            <option value="purple">Purple</option>
+          <select
+            name="Color"
+            id="Color"
+            class="w-[80%] mt-2 dark:text-white dark:bg-transparent py-1 px-4 border">
+            <option value=" Select your font size" class="dark:text-black">
+              Select your Color
+            </option>
+            <option value="red" class="dark:text-black">Red</option>
+            <option value="black" class="dark:text-black">black</option>
+            <option value="blue" class="dark:text-black">Blue</option>
+            <option value="yellow" class="dark:text-black">Yellow</option>
+            <option value="pink" class="dark:text-black">Pink</option>
+            <option value="purple" class="dark:text-black">Purple</option>
           </select>
         </div>
       </div>
@@ -129,27 +189,30 @@
         <label
           for="imageInput"
           id="uploadText"
-          class="w-full h-full flex items-center justify-center">
+          class="w-full dark:text-white h-full flex flex-col gap-2 items-center justify-center">
+          <i class="fa-solid fa-photo-film"></i>
           Upload Image
         </label>
       </div>
 
       <!-- styling part -->
       <div
-        class="flex items-center flex-wrap 668px:flex-nowrap gap-6 justify-between w-[94%] 668px:w-[60%] mx-auto my-5">
+        class="flex items-center flex-wrap 668px:flex-nowrap gap-6 justify-center 668px:justify-between w-[94%] 668px:w-[60%] mx-auto my-5">
         <div class="">
-          <label for="imageRepeat" class="font-semibold text-black text-[20px]"
+          <label
+            for="imageRepeat"
+            class="font-semibold dark:text-white text-black text-[20px]"
             >Image Repeat</label
           ><br />
           <select
             name="imageRepeat"
             id="imageRepeat"
-            class="w-[80%] py-1 px-4 border">
-            <option value=" Select your font size">
+            class="w-[80%] mt-2 dark:text-white dark:bg-transparent py-1 px-4 border">
+            <option value=" Select your font size" class="dark:text-black">
               Choose your image style
             </option>
-            <option value="repeat">Repeat</option>
-            <option value="no-repeat">No-Repeat</option>
+            <option value="repeat" class="dark:text-black">Repeat</option>
+            <option value="no-repeat" class="dark:text-black">No-Repeat</option>
           </select>
         </div>
 
@@ -157,40 +220,42 @@
         <div class="">
           <label
             for="imagePosition"
-            class="font-semibold text-black text-[20px]"
+            class="font-semibold dark:text-white text-black text-[20px]"
             >Image Position</label
           ><br />
           <select
             name="imagePosition"
             id="imagePosition"
-            class="w-[80%] py-1 px-4 border">
-            <option value=" Select your font size">
+            class="w-[80%] mt-2 dark:text-white dark:bg-transparent py-1 px-4 border">
+            <option value=" Select your font size" class="dark:text-black">
               Choose your image position
             </option>
-            <option value="top">Top</option>
-            <option value="left">Left</option>
-            <option value="right">Right</option>
-            <option value="bottom">Bottom</option>
-            <option value="center">Center</option>
+            <option value="top" class="dark:text-black">Top</option>
+            <option value="left" class="dark:text-black">Left</option>
+            <option value="right" class="dark:text-black">Right</option>
+            <option value="bottom" class="dark:text-black">Bottom</option>
+            <option value="center" class="dark:text-black">Center</option>
           </select>
         </div>
 
         <!-- image Size -->
         <div class="">
-          <label for="imageSize" class="font-semibold text-black text-[20px]"
+          <label
+            for="imageSize"
+            class="font-semibold dark:text-white text-black text-[20px]"
             >Image Size</label
           ><br />
           <select
             name="imageSize"
             id="imageSize"
-            class="w-[80%] py-1 px-4 border">
-            <option value=" Select your font size">
+            class="w-[80%] mt-2 dark:text-white dark:bg-transparent py-1 px-4 border">
+            <option value=" Select your font size" class="dark:text-black">
               Choose your image size
             </option>
-            <option value="cover">Cover</option>
-            <option value="contain">Contain</option>
-            <option value="auto">Auto</option>
-            <option value="unset">Unset</option>
+            <option value="cover" class="dark:text-black">Cover</option>
+            <option value="contain" class="dark:text-black">Contain</option>
+            <option value="auto" class="dark:text-black">Auto</option>
+            <option value="unset" class="dark:text-black">Unset</option>
           </select>
         </div>
 
@@ -198,22 +263,22 @@
         <div class="">
           <label
             for="imageAttachment"
-            class="font-semibold text-black text-[20px]"
+            class="font-semibold dark:text-white text-black text-[20px]"
             >Image Attachment</label
           ><br />
           <select
             name="imageAttachment"
             id="imageAttachment"
-            class="w-[80%] py-1 px-4 border">
-            <option value=" Select your font size">
+            class="w-[80%] mt-2 dark:text-white dark:bg-transparent py-1 px-4 border">
+            <option value=" Select your font size" class="dark:text-black">
               Choose your image attachment
             </option>
-            <option value="fixed">Fixed</option>
-            <option value="sticky">Sticky</option>
-            <option value="local">Local</option>
-            <option value="initial">Initial</option>
-            <option value="inherit">Inherit</option>
-            <option value="unset">Unset</option>
+            <option value="fixed" class="dark:text-black">Fixed</option>
+            <option value="sticky" class="dark:text-black">Sticky</option>
+            <option value="local" class="dark:text-black">Local</option>
+            <option value="initial" class="dark:text-black">Initial</option>
+            <option value="inherit" class="dark:text-black">Inherit</option>
+            <option value="unset" class="dark:text-black">Unset</option>
           </select>
         </div>
       </div>

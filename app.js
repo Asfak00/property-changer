@@ -35,6 +35,21 @@ color.addEventListener("change", (e) => {
   textArea.style.color = value;
 });
 
+// light mode and dark mode
+const mood = document.getElementById("mood");
+const html = document.getElementById("html");
+mood.addEventListener("click", () => {
+  mood.classList.toggle("fa-moon");
+  html.classList.toggle("dark");
+});
+
+// mobile light mood and dark mood
+const lightMood = document.getElementById("lightMood");
+lightMood.addEventListener("click", () => {
+  lightMood.classList.toggle("fa-moon");
+  html.classList.toggle("dark");
+});
+
 // image section
 
 // all html element reference
@@ -89,15 +104,39 @@ const imageEditButton = document.getElementById("imageEditButton");
 imageEdit.style.display = "none";
 
 imageEditButton.addEventListener("click", () => {
-  imageEditButton.style.color = "lightGreen";
-  textEditButton.style.color = "white";
   imageEdit.style.display = "block";
   textEdit.style.display = "none";
 });
 
 textEditButton.addEventListener("click", () => {
-  imageEditButton.style.color = "white";
-  textEditButton.style.color = "lightGreen";
   imageEdit.style.display = "none";
   textEdit.style.display = "block";
+});
+
+// manubar
+const manuBar = document.getElementById("menuBar");
+const menuIcon = document.getElementById("menuIcon");
+const mobileNavbar = document.getElementById("mobileNavbar");
+
+manuBar.addEventListener("click", () => {
+  menuIcon.classList.toggle("fa-xmark");
+  mobileNavbar.classList.toggle("hidden");
+});
+
+// mobile navbar setting
+const image = document.getElementById("imageEdit");
+const text = document.getElementById("textEdit");
+const textButton = document.getElementById("mobileTextEditButton");
+const imageButton = document.getElementById("mobileImageEditButton");
+
+image.style.display = "none";
+
+imageButton.addEventListener("click", () => {
+  image.style.display = "block";
+  text.style.display = "none";
+});
+
+textButton.addEventListener("click", () => {
+  image.style.display = "none";
+  text.style.display = "block";
 });
