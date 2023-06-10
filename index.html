@@ -7,5 +7,116 @@
     <title>Property Changer</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body class="class">
+    <!-- navbar start -->
+    <nav
+      class="flex items-center justify-between w-full h-[60px] bg-black shadow-sm py-3 px-5">
+      <div class="font-semibold text-4xl text-white">
+        <h1 id="logo">Property Changer</h1>
+      </div>
+
+      <ul
+        class="list-none flex items-center font-600 text-white gap-6 font-500 text-[17px]">
+        <li class="capitalize">text edit</li>
+        <li class="capitalize">image edit</li>
+      </ul>
+    </nav>
+
+    <!-- navbar end -->
+
+    <!-- text edit section start -->
+
+    <section class="w-full my-10">
+      <!-- textarea for writing text -->
+      <div class="w-[60%] mx-auto h-[300px]">
+        <textarea
+          id="textArea"
+          class="w-full h-full border px-3 py-2 outline-none"
+          placeholder="Type anything......"></textarea>
+      </div>
+
+      <!-- font size -->
+      <div class="flex items-center justify-between w-[60%] mx-auto my-5">
+        <div class="">
+          <label for="fontSize" class="font-semibold text-black text-[20px]"
+            >Font Size</label
+          ><br />
+          <select
+            name="fontSize"
+            id="fontSize"
+            class="w-[70%] py-1 px-4 border">
+            <option value=" Select your font size">
+              Select your font size
+            </option>
+            <option value="10px">10px</option>
+            <option value="15px">15px</option>
+            <option value="20px">20px</option>
+            <option value="25px">25px</option>
+            <option value="30px">30px</option>
+            <option value="35px">35px</option>
+          </select>
+        </div>
+
+        <!-- font weight -->
+        <div class="">
+          <label for="FontWeight" class="font-semibold text-black text-[20px]"
+            >Font Weight</label
+          ><br />
+          <select
+            name="FontWeight"
+            id="FontWeight"
+            class="w-[70%] py-1 px-4 border">
+            <option value=" Select your font size">
+              Select your font weight
+            </option>
+            <option value="400">400</option>
+            <option value="500">500</option>
+            <option value="600">600</option>
+            <option value="700">700</option>
+            <option value="800">800</option>
+            <option value="900">900</option>
+          </select>
+        </div>
+
+        <!-- font family -->
+        <div class="">
+          <label for="FontFamily" class="font-semibold text-black text-[20px]"
+            >Font Family</label
+          ><br />
+          <select
+            name="FontFamily"
+            id="FontFamily"
+            class="w-[70%] py-1 px-4 border">
+            <option value=" Select your font size">
+              Select your font family
+            </option>
+            <option value="serif">serif</option>
+            <option value="sans-serif">sans-serif</option>
+            <option value="mono">mono</option>
+            <option value="Thin">Thin</option>
+          </select>
+        </div>
+
+        <!-- color -->
+        <div class="">
+          <label for="Color" class="font-semibold text-black text-[20px]"
+            >Color</label
+          ><br />
+          <select name="Color" id="Color" class="w-[70%] py-1 px-4 border">
+            <option value=" Select your font size">Select your Color</option>
+            <option value="red">Red</option>
+            <option value="black">black</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- text edit section end -->
+
+    <script src="app.js"></script>
+  </body>
 </html>
